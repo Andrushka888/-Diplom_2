@@ -1,3 +1,5 @@
+package user;
+
 public class UserCredentials {
     private String email;
     private String password;

@@ -1,18 +1,18 @@
-public class User {
+package user;
 
+public class UserCredentialsToChange {
     private String email;
     private String password;
     private String name;
 
-    public User(String email, String password, String name) {
+    public UserCredentialsToChange(String email, String password, String name) {
         this.email = email;
         this.password = password;
         this.name = name;
     }
 
-    public User(String email, String password) { // Конструктор для создания пользователя без всех обязательных полей
-        this.email = email;
-        this.password = password;
+    public static UserCredentialsToChange from(User user) {
+        return new UserCredentialsToChange(user.getEmail(), user.getPassword(), user.getName());
     }
 
     public String getEmail() {
@@ -39,4 +39,3 @@ public class User {
         this.name = name;
     }
 }
-

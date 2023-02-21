@@ -1,3 +1,7 @@
+package user;
+
+import user.User;
+
 public class UserGenerator {
 
     public static User getDefault() {
